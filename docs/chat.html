@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Global Chat — WorldTalk</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0B1020" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body class="chat-body-page">
+<div class="chat-app" id="chat-app">
+  <header class="chat-top">
+    <a class="brand compact" href="./"><span class="brand-mark"></span> WorldTalk</a>
+    <div class="chat-meta">
+      <strong>Global Chat</strong>
+      <span class="pill" id="online-count">1 online</span>
+      <span class="status ok" id="conn-status">Live (demo room)</span>
+    </div>
+    <div class="chat-actions">
+      <button type="button" class="icon-btn" id="btn-theme">Theme</button>
+      <a class="icon-btn" href="./">Home</a>
+    </div>
+  </header>
+  <div class="chat-body" style="grid-template-columns:1fr">
+    <section class="feed-wrap">
+      <div class="feed" id="message-feed" role="log" aria-live="polite"></div>
+      <div class="typing" id="typing-line" hidden></div>
+      <form class="composer" id="composer">
+        <input id="name-input" maxlength="24" placeholder="Your name" style="max-width:140px" />
+        <input id="message-input" maxlength="500" placeholder="Message the world…" autocomplete="off" />
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+      <p class="muted tiny" style="padding:0 .75rem .75rem">GitHub Pages demo room syncs across tabs on this device. Full multi-server chat is in the PHP app on GitHub.</p>
+    </section>
+  </div>
+</div>
+<script src="assets/js/demo-chat.js"></script>
+</body>
+</html>
